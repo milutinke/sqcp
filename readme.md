@@ -51,7 +51,7 @@ To learn how to setup the panel, click [here](docs/setup.md)
 
 ## **The idea behind the project**
 
-**Squad** as a game does not support any GUI options for player management (as of now), player Steam ID or name auto-completion, action (command execution) logging, admins from my gaming community **Balkans Special Forces (BSF)** have struggled to keep up with lots of player requests at the same time, no matter how many admins were online. Player names and Steam IDs have to be typed out in the commands every time, this can get really boring and painful, especially when there are players with non-English alphabet characters in their name. So, I came to an idea to make a GUI tool for server management. In the beginning, it was rather a simple PHP script written using [Squad RCON PHP](https://github.com/Deutsche-Squad-Gemeinschaft/squad-rcon-php), but due to some game updates and a lack of maintenance, the library was not working as intended, so I've decided to write this project using Node JS and [Squad RCON](https://github.com/Thomas-Smyth/rcon) which is a reliable library. I then had a lot of ideas that could make the lives of server owners and admins easier, so I've implemented them, but I kept this project simple, I've not implemented every single in fear that it would become too bloated. Maybe in the future, I will add some more features, but for now, this should be enough, at least for our (BSF) needs. You have complete freedom to use and change this according to your needs and to contribute and make it better.
+**Squad** as a game does not support any GUI options for player management (as of now), player Steam ID or name auto-completion, action (command execution) logging, admins from my gaming community **Balkans Special Forces (BSF)** have struggled to keep up with lots of player requests at the same time, no matter how many admins were online. Player names and Steam IDs have to be typed out in the commands every time, this can get really boring and painful, especially when there are players with non-English alphabet characters in their name. So, I came to an idea to make a GUI tool for server management. In the beginning, it was rather a simple PHP script written using [Squad RCON PHP](https://github.com/Deutsche-Squad-Gemeinschaft/squad-rcon-php), but due to some game updates and a lack of maintenance, the library was not working as intended, so I've decided to write this project using Node JS and [Squad JS](https://github.com/Thomas-Smyth/SquadJS) (RCON part) which is a reliable library. I then had a lot of ideas that could make the lives of server owners and admins easier, so I've implemented them, but I kept this project simple, I've not implemented every single in fear that it would become too bloated. Maybe in the future, I will add some more features, but for now, this should be enough, at least for our (BSF) needs. You have complete freedom to use and change this according to your needs and to contribute and make it better.
 
 <br>
 
@@ -100,7 +100,7 @@ Backend:
 -   [Express](https://expressjs.com/)
 -   [Sequelize ORM](https://sequelize.org/)
 -   [MySQL](https://www.mysql.com/)
--   [Squad RCON](https://github.com/Thomas-Smyth/rcon)
+-   [Squad JS](https://github.com/Thomas-Smyth/SquadJS) (RCON part)
 
 Frontend:
 
@@ -126,7 +126,7 @@ PS: I also need to organize the Pull Requests categories. And, do not forget to 
 
 ## **Credits**
 
--   [**Thomas Smyth**](https://github.com/Thomas-Smyth/rcon), [**Marcel Davis**](https://github.com/SquadMS/SquadMS-RCON-Worker), [**Larinel**](https://github.com/Larinel/rcon) and [**Enrique Carpintero**](https://github.com/EnriqCG/rcon-srcds) for their work on **Squad RCON** protocol library for Node JS
+-   [**Thomas Smyth**](https://github.com/Thomas-Smyth/SquadJS), [**Marcel Davis**](https://github.com/SquadMS/SquadMS-RCON-Worker), [**Larinel**](https://github.com/Larinel/rcon) and [**Enrique Carpintero**](https://github.com/EnriqCG/rcon-srcds) for their work on **Squad RCON** protocol library for Node JS
 
 <br>
 
