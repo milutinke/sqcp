@@ -244,7 +244,7 @@ export default {
         let duration = await this.waitForInput('duration (in days)', (value) => /\d/i.test(value));
 
         if (
-          await this.doTheAction('ban', {
+          await this.doTheAction('ban', 'player', {
             player,
             reason,
             duration,

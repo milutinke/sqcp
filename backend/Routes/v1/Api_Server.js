@@ -364,7 +364,7 @@ module.exports = (expressInstance) => {
       if (!action || (action && action.trim().length === 0))
         return res.json({ error: 'Please provide the action in the POST request body!' });
 
-      if (!squad && !player) return res.json({ error: 'Please provide the player in the POST request body!' });
+      if ((action === 'ban' || action === 'kick' || action === 'warn' || action === 'move') && !player) return res.json({ error: 'Please provide the player in the POST request body!' });
 
       if (action === 'disband' && !squad)
         return res.json({ error: 'Please provide the squad in the POST request body!' });
@@ -556,7 +556,7 @@ module.exports = (expressInstance) => {
           continue;
         }
 
-        response += `${ban.steamID}:${ban.duration} // Reason: ${ban.reason} - Banned by: ${ban.bannedBy} - Unban/Complaints: discord.link/bsf`;
+        response += `${ban.steamID}:${ban.duration} // Reason: ${ban.reason} - Banned by: ${ban.bannedBy} - Unban/Complaints: discord.link/bsf\r\n`;
       }
 
       res.type('text/plain').send(response);
