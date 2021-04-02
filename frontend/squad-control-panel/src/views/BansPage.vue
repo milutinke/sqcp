@@ -189,7 +189,7 @@ export default {
       ],
 
       durationRules: [
-        (value) => !!value || 'Required.',
+        (value) => value.trim().length > 0 || 'Required.',
         (value) => /^\d+$/i.test(value) || 'Duration must be a number without spaces!',
       ],
 

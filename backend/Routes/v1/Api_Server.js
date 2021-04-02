@@ -364,7 +364,8 @@ module.exports = (expressInstance) => {
       if (!action || (action && action.trim().length === 0))
         return res.json({ error: 'Please provide the action in the POST request body!' });
 
-      if ((action === 'ban' || action === 'kick' || action === 'warn' || action === 'move') && !player) return res.json({ error: 'Please provide the player in the POST request body!' });
+      if ((action === 'ban' || action === 'kick' || action === 'warn' || action === 'move') && !player)
+        return res.json({ error: 'Please provide the player in the POST request body!' });
 
       if (action === 'disband' && !squad)
         return res.json({ error: 'Please provide the squad in the POST request body!' });
@@ -615,7 +616,15 @@ module.exports = (expressInstance) => {
         if (reason && typeof reason === 'string' && reason.trim().length === 0)
           throw new Error('Please provide a valid reason!');
 
-        let newDuration = lengthInDays === 0 ? 0 : moment(foundBan.createdAt).unix() + lengthInDays * 86400;
+        let lengthInt;
+
+        try {
+          lengthInt = parseInt(lengthInDays);
+        } catch (error2) {
+          throw new Error('lengthInDays field must be a valid number!');
+        }
+
+        let newDuration = lengthInt === 0 ? 0 : moment(foundBan.createdAt).unix() + lengthInt * 86400;
         let log = `Changed player: ${foundBan.name} (Steam ID: ${foundBan.steamID})`;
         let changedParts = 0;
 
