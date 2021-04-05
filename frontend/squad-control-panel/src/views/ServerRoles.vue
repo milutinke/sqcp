@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mt-12">
     <v-card elevation="1">
       <v-card-title> Server Roles and Admins </v-card-title>
 

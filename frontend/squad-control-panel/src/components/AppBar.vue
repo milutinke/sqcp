@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-navigation-drawer v-if="shouldDisplayMenu" v-model="drawer" absolute temporary>
+    <v-navigation-drawer v-if="shouldDisplayMenu" v-model="drawer" app temporary>
       <v-list dense>
         <v-list-item v-for="item in items" :key="item.title" link :to="item.link">
           <v-list-item-icon>
@@ -24,7 +24,7 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar color="blue" dense dark>
+    <v-app-bar color="blue" fixed dense dark>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" v-if="shouldDisplayMenu"></v-app-bar-nav-icon>
 
       <div class="d-flex align-center">

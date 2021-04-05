@@ -40,8 +40,8 @@ module.exports = (expressInstance) => {
         if (password && (password.length < 3 || password.length > 16))
           throw new Error('The password must be between 3 and 16 characters long!');
 
-        if (password && /^[a-zA-Z0-9]+$/.test(password))
-          throw new Error('Password can contain only English alphabet letters and numbers.');
+        if (password && !/^[a-zA-Z0-9]+$/.test(password))
+          throw new Error('Password can contain only English alphabet letters and numbers!');
 
         if (password !== confirmPassword) throw new Error('Passwords do not match!');
 

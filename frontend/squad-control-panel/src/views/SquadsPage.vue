@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mt-12">
     <v-card>
       <v-card-title> Teams and Squads in them </v-card-title>
 

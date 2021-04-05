@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-card class="mt-12">
     <v-card-actions> 404 Page not found! </v-card-actions>
 
     <v-card-actions>

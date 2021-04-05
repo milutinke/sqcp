@@ -1,5 +1,5 @@
 <template>
-  <v-card tile>
+  <v-card tile class="mt-12">
     <v-card-title> Dashboard </v-card-title>
     <v-card-text>
       <v-list three-line subheader>

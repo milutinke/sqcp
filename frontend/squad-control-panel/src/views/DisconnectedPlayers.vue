@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mt-12">
     <PlayersTable
       :table-title="`Disconnected Players (${this.players.length})`"
       tableType="disconnected"
