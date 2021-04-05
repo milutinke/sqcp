@@ -77,6 +77,8 @@ To learn how to setup the panel, click [here](docs/setup.md)
 -   Ability to change the refresh time for the player and squads lists individually
 -   Ability to customize the ban/kick message from the panel instead of changing the code
 -   Document the API using Swagger
+-   Add a ban, kick and warn history and add a page for player profile where that history could be visible to admins.
+
     <br>
 
 ## **Some important notes on the project**
