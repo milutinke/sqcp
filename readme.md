@@ -15,25 +15,24 @@
 
 ## **Features**
 
--   Authentication (login) system
--   Management of online players (kick, ban, warn and team switch the player)
--   Management of recently disconnected players (ban a recently disconnected player)
--   Management of squads (disband a squad)
--   Management of the server bans (add, edit or remove a ban) (**Super Admin only**)
--   Management of the server roles (groups) and admins (**Super Admin only**)
--   Management of the panel admins/users (**Super Admin only**)
--   RCON Console (Super Admin only)
--   Action log (every single action is logged permanently) (**Super Admin only**)
--   Layer changing (**_NOT IMPLEMENTED YET, TODO_**)
+-   Authentication system based on JWT
+-   Allows you to see the online players and to perform the following actions on them: kick, ban, warn, move (change teams)
+-   Allows you to see the teams and squads in them in a nice layout with an option to disband a squad if needed
+-   Allows you to see the recently disconnected players which you can ban if you need to
+-   Allows you to see the banned players and to perform the following actions on them: edit ban, remove ban and add a ban manually (Also has a route for ban exports) (**Super Admin only**)
+-   Allows you to create Roles (groups) which have permissions and to create, edit or delete admins with those roles. (**Super Admin only**)
+-   Allows you to execute RCON commands in a console (**Super Admin only**)
+-   Every single action is logged in a permanent log called Action Logs. (**Super Admin only**)
 -   Two types of panel admins accounts: **Super Admin** and **Normal Admin**
--   Single server support (as of now)
 
 <br>
 
-## **What it does not include**
+## **What it does not include (for now)**
 
--   Server start/restart (You can add it if you are hosting the server on your own machine or if your hosting has an API for that)
--   FTP (If there is enough interest, this can be implemented too)
+-   Web FTP
+-   Multi-server support
+-   Server start/restart
+-   Full Squad JS integration (it only uses a part of Squad JS code)
 
 <br>
 
@@ -111,7 +110,7 @@ Frontend:
 -   [Vue Router](https://router.vuejs.org/)
 -   [Vuetify](https://vuetifyjs.com/)
 
-Both:
+Common:
 
 -   [Yarn](https://yarnpkg.com/)
 -   [Prettier](https://prettier.io/)
