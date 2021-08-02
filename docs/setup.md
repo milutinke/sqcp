@@ -64,7 +64,8 @@ _PS: I expect you have a technical background and you already are familiar with 
 12. Navigate back to `backend`
 13. Open the terminal and run: `yarn install`
 14. Once it is done with the installation, run `sequelize db:migrate --config Config/database.json`
-15. Once you have successfully done with migrating, you now can run your app
+15. Once you have successfully done with migrating, you need to generate a default admin account. Navigate to `backend` folder, open up a terminal and execute: `npm run create-admin`, this script will generate a default admin account, and its credentials will be displayed on the screen.
+16. You now can run your app:
 
     - Using `screen` (If you do not have it, just install it: )
         - Run: `screen -dmS sqcp`
@@ -77,11 +78,11 @@ _PS: I expect you have a technical background and you already are familiar with 
         - See this: https://pm2.keymetrics.io/docs/usage/quick-start/
         - Use `App.js`
 
-16. Configure your gateway
-17. Access your Squad server files, navigate to `SquadGame/ServerConfig`
-18. Open `RemoteAdminListHosts.cfg`, and add the following: `<YOUR_URL>/api/v1/server/admins/text` (Replace `<YOUR_URL>` with url on which this app is hosted), save and close the file
-19. Open `RemoteBanListHosts.cfg`, and add the following: `<YOUR_URL>/api/v1/server/bans/text` (Replace `<YOUR_URL>` with url on which this app is hosted), save and close the file
+17. Configure your gateway
+18. Access your Squad server files, navigate to `SquadGame/ServerConfig`
+19. Open `RemoteAdminListHosts.cfg`, and add the following: `<YOUR_URL>/api/v1/server/admins/text` (Replace `<YOUR_URL>` with url on which this app is hosted), save and close the file
+20. Open `RemoteBanListHosts.cfg`, and add the following: `<YOUR_URL>/api/v1/server/bans/text` (Replace `<YOUR_URL>` with url on which this app is hosted), save and close the file. Example: `http://squad-control-panel.com/api/v1/server/admins/text`
 
-Example: `http://squad-control-panel.com/api/v1/server/admins/text` 20. Restart the server
+21. Restart the server
 
-Congrats, you are done!
+Congratulations, you are done!

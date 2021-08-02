@@ -70,7 +70,6 @@ To learn how to setup the panel, click [here](docs/setup.md)
 -   Panel update check
 -   Code refactoring and porting the codebase to TypeScript
 -   Preconfigured commands (just click and execute) + command execution scheduler
--   Multi-Server support (if there is enough interest)
 -   Using Squad RCON as a worker which works non-stop in the background (maybe?)
 -   GrapQL support for custom front end clients
 -   Ability to change the refresh time for the player and squads lists individually
@@ -83,9 +82,6 @@ To learn how to setup the panel, click [here](docs/setup.md)
 ## **Some important notes on the project**
 
 -   **The project is completely Open-Source and free, you are free to use it and change it according to your needs**
--   The code is not that great, it could be improved a lot, I am a beginner in the world of Vue JS and the backend code is not that great either (especially the Sequelize validation error catching) and done as fast as humanly possible, I am looking forward to improving the code when I have some spare time, the important thing is that it works, but if you have the time and will you can help with this.
-    PS: And the formatting which Prettier does is not that great too, I could not configure it to work as I intended.
--   UI is not that great and is a little bit rough on the edges, but it is functional (which is the most important thing) and decent enough, as I've said I am new to Vue JS and Vuetify, and I am not primarily a front end developer.
 -   Some people may wonder why this project did not utilize the whole of Squad JS instead of just a single part of it. The reason behind that is that we as a community have FTP issues with our current hosting, which causes Squad JS to stop working as it is dependent on FTP in order to operate. We needed this urgently,
     so I decided to use a single part of Squad JS.
     **My original idea was in fact to build this upon Squad JS**, but I could not wait to resolve FTP issues. (_By the way there is a Squad JS contributor who is working on the Squad JS control panel using React, so I will probably help on that project too, using my ideas from this one_).

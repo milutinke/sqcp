@@ -5,6 +5,7 @@
   "main": "App.js",
   "scripts": {
     "start": "node App.js",
+    "create-admin": "node Scripts/create_admin.js",
     "prettier": "prettier --write ."
   },
   "author": "Dusan Milutinovic",
