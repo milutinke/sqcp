@@ -98,7 +98,7 @@ Congratulations, you are done!
     db_data:
     services:
     sqcp:
-        image: sqcp
+        image: immervoll/sqcp
         restart: always
         volumes: 
         - sqcp_data:/usr/src/sqcp/backend/Config/
