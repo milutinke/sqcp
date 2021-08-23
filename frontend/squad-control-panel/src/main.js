@@ -14,7 +14,7 @@ import 'sweetalert2/dist/sweetalert2.min.css';
 
 // Config
 Vue.config.productionTip = false;
-Vue.config.baseURL = 'http://localhost/api/v1'; // Example: http://squad-control-panel.com/api/v1';
+Vue.config.baseURL = process.env.baseURL; // Example: http://squad-control-panel.com/api/v1';
 
 // Plugins
 Vue.use(VueAxios, axios);

@@ -12,12 +12,12 @@ const Config = {
   },
 
   DATABASE: {
-    host: Database[MODE].host,
-    user: Database[MODE].username,
-    password: Database[MODE].password,
-    database: Database[MODE].database,
-    dialect: Database[MODE].dialect,
-    port: Database[MODE].port,
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_BASE,
+    dialect: process.env.DB_DIAL,
+    port: process.env.DB_PORT,
   },
 
   LOGGER_MODULES: {
