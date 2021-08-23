@@ -1,6 +1,6 @@
 FROM node:14
 
-ENV baseURL "http://localhost/api/v1"
+ENV baseURL "http://localhost:3000/api/v1/"
 ENV RCON_HOST ""
 ENV RCON_PASSWORD ""
 ENV RCON_PORT 21114
@@ -11,6 +11,8 @@ ENV DB_PASS ""
 ENV DB_BASE ""
 ENV DB_DIAL ""
 ENV DB_PORT ""
+
+EXPOSE 3000
 
 RUN yarn global add @vue/cli
 WORKDIR /usr/src/sqcp
@@ -25,8 +27,6 @@ RUN cp -R ./dist ../backend/
 
 WORKDIR /usr/src/sqcp/backend
 RUN yarn install
-
-RUN npm run create-admin
 
 ENTRYPOINT ["/bin/bash", "/usr/src/sqcp/entrypoint.sh"]
 CMD [ "yarn", "start" ]
