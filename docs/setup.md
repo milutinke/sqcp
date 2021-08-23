@@ -86,3 +86,52 @@ _PS: I expect you have a technical background and you already are familiar with 
 21. Restart the server
 
 Congratulations, you are done!
+
+## **Setup via Docker**
+1. Create a docker-compose.yml
+   </br>Example:
+   ```yaml
+    version: '3.1'
+
+    volumes: 
+    sqcp_data:
+    db_data:
+    services:
+    sqcp:
+        image: sqcp
+        restart: always
+        volumes: 
+        - sqcp_data:/usr/src/sqcp/backend/Config/
+        ports: 
+        - 3000:3000
+        links:
+        - "db"
+        environment: 
+        RCON_HOST: "ip"
+        RCON_PASSWORD: "pw"
+        RCON_PORT: "21114"
+        JWT_SECRET: ""
+        DB_HOST: db
+        DB_USER: "sqcp"
+        DB_PASS: "securepw"
+        DB_BASE: "sqcp"
+        DB_DIAL: "mysql"
+        DB_PORT: "3306"
+
+    db:
+        image: mysql
+        restart: always
+        volumes: 
+        - db_data:/var/lib/mysql/
+        environment:
+        MYSQL_ROOT_PASSWORD: "rootpass"
+        MYSQL_DATABASE: "sqcp"
+        MYSQL_USER: "sqcp"
+        MYSQL_PASSWORD: "securepw"
+    ```
+1. docker-compose up
+2. navigate to `/usr/src/sqcp/backend/Config` and add the Database information to `database.json`
+3. restart the sqcp container
+
+Congratulations, you are done!
+
