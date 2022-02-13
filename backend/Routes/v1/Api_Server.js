@@ -388,7 +388,7 @@ module.exports = (expressInstance) => {
           await Utils.executeRcon(
             async (squadRcon) =>
               await squadRcon.execute(
-                `AdminKick "${player.steamID}" "Kicked for: '${reason}' - Kicked By: '${req.user.name}' > Unbans/Complaints: discord.link/bsf"`
+                `AdminKick "${player.steamID}" "Kicked for: '${reason}' - Kicked By: '${req.user.name}'"`
               ),
             async (result) => (success = result.includes('was kicked'))
           );
@@ -435,7 +435,7 @@ module.exports = (expressInstance) => {
             await Utils.executeRcon(
               async (squadRcon) =>
                 await squadRcon.execute(
-                  `AdminKick "${player.steamID}" "Banned for: '${reason}' (${time}) - Banned By: '${req.user.name}' > Unbans/Complaints: discord.link/bsf"`
+                  `AdminKick "${player.steamID}" "Banned for: '${reason}' (${time}) - Banned By: '${req.user.name}'"`
                 ),
               async (result) => (success = result.includes('was kicked'))
             );
