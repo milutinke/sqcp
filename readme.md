@@ -77,7 +77,13 @@ To learn how to setup the panel, click [here](docs/setup.md)
 -   Document the API using Swagger
 -   Add a ban, kick and warn history and add a page for player profile where that history could be visible to admins.
 
-    <br>
+<br>
+
+## **NOTE**
+Since I do not own a Squad server anymore this project will not continue to receive any more feature updates, it will be left as is, unless someone is willing to fund futher development.
+If you are willing to fund further development or if something breaks due to a Squad update, you can contact me via my email: milutinke@gmx.com
+
+<br>
 
 ## **Some important notes on the project**
 
@@ -129,11 +135,10 @@ PS: I also need to organize the Pull Requests categories. And, do not forget to 
 
 ## **Support**
 
-If you like this project and you have found it useful, and you are willing to support it, you can donate using Pay Pal, ETH, BTC, and Github. Thank you!
+If you like this project and you have found it useful, and you are willing to support it, you can donate using Pay Pal or ETH. Thank you!
 
 -   Pay Pal: milutinke@gmx.com
 -   ETH: `0xa8121Ee49A83f0541ca71D4B4cbEa3a0AEE70f7d`
--   BTC: `3NWiVCSAzkMhZZJxKnTqCVTSnRXNzHH1k6`
 
 <br>
 
