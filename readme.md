@@ -147,7 +147,7 @@ If you like this project and you have found it useful, and you are willing to su
 ```
 MIT License
 
-Copyright (c) 2021 Milutinke
+Copyright (c) 2022 Milutinke
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
