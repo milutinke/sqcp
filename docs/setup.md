@@ -1,7 +1,7 @@
 ## **Important**
 
 By default, CORS is enabled for all. If you are hosting the front end locally, make sure you configure it in `App.js`.
-Also, do not disable `connect-history-api-fallback` since Vuex is running in the history mode.
+Also, do not disable `connect-history-api-fallback` since Vue Router is running in the history mode.
 
 <br >
 
