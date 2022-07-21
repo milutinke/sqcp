@@ -11,12 +11,52 @@
 
 **Squad Control Panel** (**SQCP**) is a simple **Open-Source** solution for **administrating** your **Squad** game server written in [Node JS](https://nodejs.dev/) ([Express](https://expressjs.com/)) and [Vue JS](https://vuejs.org/) ([Vuetify Framework](https://vuetifyjs.com/)), utilizing the [RCON protocol](https://developer.valvesoftware.com/wiki/Source_RCON_Protocol) and [MySQL database](https://www.mysql.com/).
 
+Features list bellow the **News** section.
+
 <br>
 
 ## **News**
 
-In the comming months I'll be rewritting the project code base, the backend will be using Squad JS for RCON and live updates feature, the frontend will most likey be written in Vue 3 but using Quasar this time instead of Vuetify.
+**21 of July 2022** - Hello everyone, in the coming months I'll be rewriting the project code base, the back end will be using Squad JS for RCON and live updates feature and the code base will be rewritten in Typescript using the following architecture: 
+`Request <-> Express <-> Controller <-> Service <-> Repository <-> DAO`.
+
+Technologies which I plan to use for back end:
+ - Typescript
+ - Type ORM
+ - Express
+ - Eslinter
+ - Docker
+ - Swaggers
+
+The frontend will most likely be written in Vue 3 but using Quasar this time instead of Vuetify.
 I'll also make a docker image.
+
+Planned features:
+ - Multi server support
+ - Admin account permissions (instead of 2 hard coded account types)
+ - Admin chat (just on the panel, not in-game)
+ - Admin notes
+ - Player profiles (with play history, statistic, chat history, warnings history)
+ - Live chat feed
+ - Live team kills feed
+ - Live connect/disconnect feed
+ - Live admin requests and notifications
+ - Server-side pagination for all tables
+ - Pre-configured commands and a command scheduler
+ - Pre-configured ban/kick/warning reasons
+ - Discord web hook integration for logs
+ - Transfer squad to other team option
+
+Some additional plans:
+ - Ability to change the API link dynamically on the frontend without recompiling (You will be required to provide the backend url before being able to login, just for the first time). This will enable a public pre-built release to ease the setup. And we could boot up a publicly hosted frontend on Netlify.
+
+NOTE: Since the project will be completely rewritten from 0, I'll not be providing backwards compatibility with the old database in the code base itself.
+I'll probably make a separate tool for porting old bans, logs and roles to the new system for those who do not know how to export SQL.
+
+**When I start, donations would be very appreciated since I need to get a VPS and a server for testing.**
+
+Also, if you're interested, feel free to contribute with ideas of your own by opening an issue or making a pull request.
+If there is interest I could make a public Trello board and complete explanation of the planned architecture.
 
 <br>
 
@@ -58,31 +98,6 @@ To learn how to setup the panel, click [here](docs/setup.md)
 ## **The idea behind the project**
 
 **Squad** as a game does not support any GUI options for player management (as of now), player Steam ID or name auto-completion, action (command execution) logging, admins from my gaming community **Balkans Special Forces (BSF)** have struggled to keep up with lots of player requests at the same time, no matter how many admins were online. Player names and Steam IDs have to be typed out in the commands every time, this can get really boring and painful, especially when there are players with non-English alphabet characters in their name. So, I came to an idea to make a GUI tool for server management. In the beginning, it was rather a simple PHP script written using [Squad RCON PHP](https://github.com/Deutsche-Squad-Gemeinschaft/squad-rcon-php), but due to some game updates and a lack of maintenance, the library was not working as intended, so I've decided to write this project using Node JS and [Squad JS](https://github.com/Thomas-Smyth/SquadJS) (RCON part) which is a reliable library. I then had a lot of ideas that could make the lives of server owners and admins easier, so I've implemented them, but I kept this project simple, I've not implemented every single in fear that it would become too bloated. In the future, I will add some more features, but for now, this should be enough, at least for our (BSF) needs and I do not have much time because of the university. You have complete freedom to use and change this according to your needs and to contribute and make it better.
-
-<br>
-
-## **List of ideas/features that are not implemented/TO-DOs**
-
-#### _But should get implemented in the future_
-
--   Ability to configure the permissions for panel admin accounts instead of having 2 account types.
--   Ability to change or set next layer via GUI (_you currently can use the RCON console as a super admin for this_)
--   Ability for a panel admin to change his own account information (currently only super admins can do this)
--   Personal notes for panel admins
--   Discord Webhook integration for action logs
--   Ability to transfer a whole squad to another team
--   Squad JS integration (more info down below)
-    -   This will enable real-time chat, real-time kill feed, various statistics (graphs), real-time admin requesting, and a lot of different possibilities
--   Real-time chat for admins on the panel
--   Panel update check
--   Code refactoring and porting the codebase to TypeScript
--   Preconfigured commands (just click and execute) + command execution scheduler
--   Using Squad RCON as a worker which works non-stop in the background (maybe?)
--   GrapQL support for custom front end clients
--   Ability to change the refresh time for the player and squads lists individually
--   Ability to customize the ban/kick message from the panel instead of changing the code
--   Document the API using Swagger
--   Add a ban, kick and warn history and add a page for player profile where that history could be visible to admins.
 
 <br>
 
