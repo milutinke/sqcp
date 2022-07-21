@@ -44,7 +44,7 @@ module.exports = (sequelize, DataTypes) => {
           },
 
           is: {
-            args: /^((startvote|changemap|pause|cheat|private|chat|kick|ban|config|cameraman|immunity|manageserver|featuretest|reserve|demos|debug|teamchange|forceteamchange|canseeadminchat|balance),?)+$/g,
+            args: /^((startvote|changemap|pause|cheat|private|chat|kick|ban|config|cameraman|immune|manageserver|featuretest|reserve|demos|debug|teamchange|forceteamchange|canseeadminchat|balance),?)+$/g,
             msg: 'Invalid permission specified, pleace check the permissions again!',
           },
         },
