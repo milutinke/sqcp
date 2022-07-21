@@ -53,6 +53,8 @@ Some additional plans:
 NOTE: Since the project will be completely rewritten from 0, I'll not be providing backwards compatibility with the old database in the code base itself.
 I'll probably make a separate tool for porting old bans, logs and roles to the new system for those who do not know how to export SQL.
 
+As for the old codebase, it will be moved to a legacy branch once the new one is tested and stable.
+
 **When I start, donations would be very appreciated since I need to get a VPS and a server for testing.**
 
 Also, if you're interested, feel free to contribute with ideas of your own by opening an issue or making a pull request.
