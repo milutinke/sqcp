@@ -50,7 +50,7 @@ _PS: I expect you have a technical background and you already are familiar with 
 
 **The easiest way to deploy is using [Digital Ocean](https://m.do.co/c/970c894d5986), where you have Node JS, Nginx and PM2 preconfigured and installed**
 
-1. Clone the repository using Git or download it as a zip and extract it
+1. Clone the repository using Git or download it as a zip and extract it: `git clone https://github.com/milutinke/sqcp.git`
 2. Navigate to `frontend/squad-control-panel/src` and open `main.js`
 3. Change `Vue.config.baseURL` value to the URL where your app will be running. (**NOTE: Your url must end with `/api/v1` (without `/` and the end, after `v1`) - Example: `http://localhost:3000/api/v1`**)
 4. Save and close the file
@@ -78,7 +78,7 @@ _PS: I expect you have a technical background and you already are familiar with 
         - See this: https://pm2.keymetrics.io/docs/usage/quick-start/
         - Use `App.js`
 
-17. Configure your gateway
+17. Configure your gateway using Nginx or Apache
 18. Access your Squad server files, navigate to `SquadGame/ServerConfig`
 19. Open `RemoteAdminListHosts.cfg`, and add the following: `<YOUR_URL>/api/v1/server/admins/text` (Replace `<YOUR_URL>` with url on which this app is hosted), save and close the file
 20. Open `RemoteBanListHosts.cfg`, and add the following: `<YOUR_URL>/api/v1/server/bans/text` (Replace `<YOUR_URL>` with url on which this app is hosted), save and close the file. Example: `http://squad-control-panel.com/api/v1/server/admins/text`
