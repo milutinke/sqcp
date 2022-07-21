@@ -13,6 +13,13 @@
 
 <br>
 
+## **News**
+
+In the comming months I'll be rewritting the project code base, the backend will be using Squad JS for RCON and live updates feature, the frontend will most likey be written in Vue 3 but using Quasar this time instead of Vuetify.
+I'll also make a docker image.
+
+<br>
+
 ## **Features**
 
 -   Authentication system based on JWT
@@ -76,12 +83,6 @@ To learn how to setup the panel, click [here](docs/setup.md)
 -   Ability to customize the ban/kick message from the panel instead of changing the code
 -   Document the API using Swagger
 -   Add a ban, kick and warn history and add a page for player profile where that history could be visible to admins.
-
-<br>
-
-## **NOTE**
-Since I do not own a Squad server anymore this project will not continue to receive any more feature updates, it will be left as is, unless someone is willing to fund futher development.
-If you are willing to fund further development or if something breaks due to a Squad update, you can contact me via my email: milutinke@gmx.com
 
 <br>
 
