@@ -17,6 +17,11 @@ Features list bellow the **News** section.
 
 ## **News**
 
+**11 of June 2023** - Hello everyone, I've finally found some free time to re-work the project from the ground up, which I've started doing in C#.
+
+I've decided not to use TypeScript, because I want to get better at ASP.NET Core and C# in general.
+The work I am doing is going to be available in branch: https://github.com/milutinke/sqcp/tree/v2
+
 **21 of July 2022** - Hello everyone, in the coming months I'll be rewriting the project code base, the back end will be using Squad JS for RCON and live updates feature and the code base will be rewritten in Typescript using the following architecture: 
 `Request <-> Express <-> Controller <-> Service <-> Repository <-> DAO`.
 
