@@ -433,3 +433,6 @@ Desktop.ini
 .DS_Store
 
 .idea/*
+
+obj/
+bin/

@@ -1,4 +1,6 @@
 using SocketIOClient;
+using SQCP.Contracts.DataAccess;
+using SQCP.DataAccess;
 using SQCP.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,10 +20,7 @@ builder.Services.AddSingleton<SocketIO>(sp =>
             Auth = new { token = "test" }
         });
 
-        client.OnConnected += (sender, e) =>
-        {
-            Console.WriteLine("Connected to the WebSocket server.");
-        };
+        client.OnConnected += (sender, e) => { Console.WriteLine("Connected to the WebSocket server."); };
 
         client.OnError += (sender, e) =>
         {
@@ -51,7 +50,31 @@ builder.Services.AddSingleton<SocketIO>(sp =>
     }
 });
 
+// Db Connection
+/*builder.Services.AddDbContext<DatabaseContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("sqlConnection"))
+);*/
+
+// Add services to the container.
+builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 builder.Services.AddHostedService<SocketService>();
+
+// Auto-Mapper
+//builder.Services.AddAutoMapper(typeof(MapperInitializer));
+
+// CORS
+builder.Services.AddCors(o =>
+{
+    o.AddPolicy("AllowAll", builder =>
+        builder.AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader()
+    );
+});
+
+// Prevent JSON recursion error
+builder.Services.AddControllers().AddNewtonsoftJson(options =>
+    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
 var app = builder.Build();
 

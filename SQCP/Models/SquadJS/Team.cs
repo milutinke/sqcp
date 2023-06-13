@@ -12,18 +12,18 @@ public class Team
         Name = name;
         _squads = new Dictionary<int, Squad>();
     }
-    
+
     public void AddSquad(Squad squad)
     {
-        if (!_squads.ContainsKey(squad.SquadId))
+        if (!_squads!.ContainsKey(squad.SquadId))
             _squads.Add(squad.SquadId, squad);
     }
 
     public void RemoveSquad(Squad squad)
     {
-        if (_squads.ContainsKey(squad.SquadId))
+        if (_squads!.ContainsKey(squad.SquadId))
             _squads.Remove(squad.SquadId);
     }
 
-    public IDictionary<int, Squad> GetSquads() => _squads;
+    public IDictionary<int, Squad> GetSquads() => _squads!;
 }
