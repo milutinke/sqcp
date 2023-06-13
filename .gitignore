@@ -434,5 +434,7 @@ Desktop.ini
 
 .idea/*
 
-obj/
-bin/
+*/**/bin/Debug
+*/**/bin/Release
+*/**/obj/Debug
+*/**/obj/Release
