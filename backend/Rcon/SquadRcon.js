@@ -123,26 +123,28 @@ class SquadRcon extends Rcon {
 
     for (const line of response.split('\n')) {
       const matchedOnline = line.match(
-        /ID: ([0-9]+) \| SteamID: ([0-9]{17}) \| Name: (.+) \| Team ID: ([0-9]+) \| Squad ID: ([0-9]+|N\/A)/
+        /ID: ([0-9]+) \| Online IDs: EOS: (\w{32}) steam: (\d{17}) \| Name: (.+) \| Team ID: ([0-9]+) \| Squad ID: ([0-9]+|N\/A)/
       );
       const matchedDisconnected = line.match(
-        /^ID: (\d{1,}) \| SteamID: (\d{17}) \| Since Disconnect: (\d{2,})m.(\d{2})s \| Name: (.*?)$/
+        /^ID: (\d{1,}) \| Online IDs: EOS: (\w{32}) steam: (\d{17}) \| Since Disconnect: (\d{2,})m.(\d{2})s \| Name: (.*?)$/
       );
 
       if (matchedOnline) {
         onlinePlayers.push({
           playerID: matchedOnline[1],
-          steamID: matchedOnline[2],
-          name: matchedOnline[3],
-          teamID: matchedOnline[4],
-          squadID: matchedOnline[5] !== 'N/A' ? matchedOnline[5] : null,
+          eosID: matchedOnline[2],
+          steamID: matchedOnline[3],
+          name: matchedOnline[4],
+          teamID: matchedOnline[5],
+          squadID: matchedOnline[6] !== 'N/A' ? matchedOnline[6] : null,
         });
       } else if (matchedDisconnected) {
         disconnectedPlayers.push({
           playerID: matchedDisconnected[1],
-          steamID: matchedDisconnected[2],
-          name: matchedDisconnected[5],
-          sinceDisconnect: `${matchedDisconnected[3]}m ${matchedDisconnected[4]}s`,
+          eosID: matchedDisconnected[2],
+          steamID: matchedDisconnected[3],
+          name: matchedDisconnected[6],
+          sinceDisconnect: `${matchedDisconnected[4]}m ${matchedDisconnected[5]}s`,
         });
       }
     }
